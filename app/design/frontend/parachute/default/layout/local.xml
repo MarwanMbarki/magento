@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<!--
+/*
+ * Parachute Store
+ * https://www.thisisparachute.com/
+ *
+ * @description  Layout modifications
+ * @author       MARWAN MBARKI
+ * @package      parachute
+ *
+ */
+-->
+<layout version="0.1.0">
+    <default>
+        <reference name="head">
+            <!-- jQuery locally -->
+            <action method="addItem"><type>skin_js</type><name>js/libs/jquery.min.js</name></action>
+
+            <!-- jQuery CDN -->
+            <block type="core/text" name="cdn.jquery">
+                <action method="setText">
+                    <text>
+                        <![CDATA[
+                        <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+                        <script type="text/javascript">jQuery.noConflict();</script>
+                        ]]>
+                    </text>
+                </action>
+            </block>
+
+            <!-- add some items (globally) -->
+            <action method="addItem"><type>skin_js</type><name>js/libs/modernizr.min.js</name></action>
+            <action method="addItem"><type>skin_js</type><name>js/libs/html5shiv.min.js</name><params/><if>lt IE 9</if></action>
+            <action method="addItem"><type>skin_js</type><name>js/libs/respond.min.js</name><params/><if>lt IE 9</if></action>
+            <action method="addItem"><type>skin_js</type><name>js/libs/selectivizr.min.js</name><params/><if>lt IE 9</if></action>
+
+            <!-- remove some items (globally) -->
+            <action method="removeItem"><type>skin_css</type><name>css/base.css</name></action>
+            <action method="removeItem"><type>skin_css</type><name>css/print.css</name></action>
+            <action method="removeItem"><type>skin_css</type><name>css/styles-ie.css</name><params/><if>lt IE 8</if></action>
+            <action method="removeItem"><type>skin_js</type><name>js/ie6.js</name><if>lt IE 7</if></action>
+            <action method="removeItem"><type>js</type><name>lib/ds-sleight.js</name><params/><if>lt IE 7</if></action>
+        </reference>
+    </default>
+
+
+    <!-- ADD THIS ITEMS JUST TO THE HOME PAGE -->
+    <cms_index_index>
+        <reference name="head">
+            <!-- add items just on the homepage -->
+            <action method="addItem"><type>skin_js</type><name>js/libs/home.min.js</name></action>
+            <action method="addItem"><type>skin_css</type><name>css/home.css</name></action>
+        </reference>
+    </cms_index_index>
+
+
+    <!-- remove a block -->
+    <remove name="right.permanent.callout" />
+
+    <!-- unset a block -->
+    <reference name="right">
+        <action method="unsetChild"><name>right.poll</name></action>
+    </reference>
+
+</layout>

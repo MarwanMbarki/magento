@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+      <Parachute_SmartShipping>
+        <active>true</active>
+        <codePool>local</codePool>
+
+        <depends>
+          <Mage_Shipping />
+        </depends>
+      </Parachute_SmartShipping>
+    </modules>
+</config>

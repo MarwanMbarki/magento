@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<!--
+=====================================================================
+ PARACHUTE SMART SHIPPING MODULE
+ http://thisisparachute.com
+ Copyright Parachute Digital Solutions 2018. All rights reserved.
+=====================================================================
+-->
+<config>
+    <modules>
+        <Parachute_SmartShipping>
+            <version>0.1.0</version>
+        </Parachute_SmartShipping>
+    </modules>
+
+     <default>
+      <carriers>
+        <parachute_smartshipping>
+            <active>1</active>
+            <model>smartshipping/carrier</model>
+            <title>Delivery</title>
+            <sort_order>10</sort_order>
+            <sallowspecific>0</sallowspecific>
+
+            <!-- Shipping Price Tiers -->
+            <shipping_price_tiers>
+                <shipping_tier_one>
+                    <range>
+                        <min>0.00</min>
+                        <max>50.00</max>
+                    </range>
+
+                    <standard>
+                        <rate>3.95</rate>
+                        <time>2-3 days</time>
+                        <active>1</active>
+                    </standard>
+
+                    <express>
+                        <rate>5.95</rate>
+                        <time>1-2 days</time>
+                        <active>1</active>
+                    </express>
+                </shipping_tier_one>
+
+                <shipping_tier_two>
+                    <range>
+                        <min>50.00</min>
+                        <max>250.00</max>
+                    </range>
+
+                    <standard>
+                        <rate>0</rate>
+                        <time>2-3 days</time>
+                        <active>1</active>
+                    </standard>
+
+                    <express>
+                        <rate>5.95</rate>
+                        <time>1-2 days</time>
+                        <active>1</active>
+                    </express>
+                </shipping_tier_two>
+
+                <shipping_tier_three>
+                    <range>
+                        <min>250.00</min>
+                        <max>999999.00</max>
+                    </range>
+
+                    <standard>
+                        <rate>0</rate>
+                        <time>2-3 days</time>
+                        <active>1</active>
+                    </standard>
+
+                    <express>
+                        <rate>0</rate>
+                        <time>1-2 days</time>
+                        <active>1</active>
+                    </express>
+                </shipping_tier_three>
+
+                <backorder_shipping>
+                    <range>
+                        <min>0</min>
+                        <max>999999</max>
+                    </range>
+
+                    <standard>
+                        <rate>3.95</rate>
+                        <time>7-10 days</time>
+                        <active>1</active>
+                    </standard>
+
+                    <express>
+                        <rate>5.95</rate>
+                        <time>7-10 days</time>
+                        <active>1</active>
+                    </express>
+                </backorder_shipping>
+            </shipping_price_tiers>
+        </parachute_smartshipping>
+      </carriers>
+    </default>
+
+    <frontend>
+        <!-- Layout Updates -->
+        <layout>
+            <updates>
+                <smartshipping>
+                    <file>parachute_smartshipping.xml</file>
+                </smartshipping>
+            </updates>
+        </layout>
+
+        <!-- Controllers -->
+        <routers>
+            <smartshipping>
+                <use>standard</use>
+                <args>
+                    <module>Parachute_SmartShipping</module>
+                    <frontName>smart-shipping</frontName>
+                </args>
+            </smartshipping>
+        </routers>
+    </frontend>
+
+    <global>
+        <!-- Blocks -->
+        <blocks>
+            <smartshipping>
+                <class>Parachute_SmartShipping_Block</class>
+            </smartshipping>
+        </blocks>
+
+        <!-- Models -->
+        <models>
+            <smartshipping>
+                <class>Parachute_SmartShipping_Model</class>
+            </smartshipping>
+        </models>
+
+        <!-- Helpers -->
+        <helpers>
+          <smartshipping>
+              <class>Parachute_SmartShipping_Helper</class>
+          </smartshipping>
+        </helpers>
+
+        <!-- DB Stuff, Installation & Upgrades -->
+        <!--
+        <resources>
+            <parachute_storedelivery_setup>
+                <setup>
+                    <module>Parachute_StoreDelivery</module>
+                    <class>Mage_Core_Model_Resource_Setup</class>
+                </setup>
+            </parachute_storedelivery_setup>
+        </resources>
+        -->
+    </global>
+</config>
