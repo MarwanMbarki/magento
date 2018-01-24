@@ -154,6 +154,12 @@
                 <block type="page/html_cookieNotice" name="global_cookie_notice" as ="global_cookie_notice" template="page/html/cookienotice.phtml" before="-" />
             </block>
         </block>
+        
+        <!-- CUSTOM HTML BLOCK -->
+        <block type="core/profiler" output="toHtml" name="core_profiler" translate="label">
+            <label>Navigation Block</label>
+            <block type="page/hatml_navbar" name="navbar" as="navbar">
+        </block>
 
         <block type="core/profiler" output="toHtml" name="core_profiler"/>
     </default>
