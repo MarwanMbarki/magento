@@ -1,0 +1,168 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magento.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magento.com for more information.
+ *
+ * @category    design
+ * @package     rwd_default
+ * @copyright   Copyright (c) 2006-2014 X.commerce, Inc. (http://www.magento.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<?php
+/**
+ * Template for Mage_Page_Block_Html
+ */
+?>
+
+<!DOCTYPE html>
+
+<!--[if lt IE 7 ]>
+<html lang="<?php echo $this->getLang(); ?>" id="top" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>
+<html lang="<?php echo $this->getLang(); ?>" id="top" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>
+<html lang="<?php echo $this->getLang(); ?>" id="top" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>
+<html lang="<?php echo $this->getLang(); ?>" id="top" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="<?php echo $this->getLang(); ?>" id="top" class="no-js"> <!--<![endif]-->
+
+<head>
+    <?php echo $this->getChildHtml('head') ?>
+</head>
+<body class="page-empty <?php echo $this->getBodyClass() ? $this->getBodyClass() : '' ?>">
+<!--        --><?php //echo $this->getChildHtml('after_body_start') ?>
+<!--        --><?php //echo $this->getChildHtml('global_messages') ?>
+<!--        --><?php //echo $this->getChildHtml('content') ?>
+<!--        --><?php //echo $this->getChildHtml('before_body_end') ?>
+<!--        --><?php //echo $this->getAbsoluteFooter() ?>
+
+
+<!-- INCLUDE NAVIGATION BAR -->
+<?php echo $this->getChildHtml('header') ?>
+
+<!-- CONTACT US BODY PAGE CONTENT -->
+<div class="voyage_contact-us">
+
+    <!-- BREADCRUMBS -->
+    <div class="voyage_breadcrumbs">
+        <div class="container-fluid">
+            <div class="row">
+                <p><a href="/">Home</a> / <a href="#!"> The Final Few </a> / <a href="#!"> Cushions</a></p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- LARGE BANNER IMAGE -->
+    <div class="voyage_two-block-product">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="voyage_two-block-product_left">
+                    <div class="voyage_two-block-text">
+                        <h3 class="italic-libre">The Final Few</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Aperiam autem cumque dolorem est laboriosam necessitatibus qui.
+                            Aspernatur at aut facere rem reprehenderit repudiandae soluta?
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- HEADER FILTER -->
+    <div class="voyage_product-link-filters">
+        <div class="container-fluid">
+            <div class="filter-links">
+                <div class="row">
+                    <ul>
+                        <li><a href="#!">Filter Products: </a></li>
+                        <li><a href="#!">Cushions </a></li>
+                        <li><a href="#!">Sub Link 2 </a></li>
+                        <li><a href="#!">Sub Link 3 </a></li>
+                        <li><a href="#!">Sub Link 4 </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOP PAGINATION -->
+    <div class="voyage_top-pagination">
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row">
+
+
+                    <!-- PAGINATION SECTION -->
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ALL PRODUCTS LISTING  -->
+    <div class="voyage_all-products-container">
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row">
+
+                    <!-- SINGLE ITEM PRODUCTS -->
+                    <div class="voyage_single-item">
+                        <div class="col-md-4">
+                            <div class="row">
+                                <ul>
+                                    <a href="#!">
+                                        <li>
+                                            <img src="<?php echo $this->getSkinUrl('img/content/pillow_PNG14166.png') ?>"
+                                                 alt="">
+                                        </li>
+                                    </a>
+                                    <li>
+                                        Product Name
+                                    </li>
+                                    <li>
+                                        <ul>
+                                            <li>£20</li>
+                                            <li>£15</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+</body>
+<!-- INCLUDE FOOTER BAR -->
+<?php echo $this->getChildHtml('footer') ?>
+</html>
