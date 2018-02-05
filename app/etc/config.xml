@@ -34,8 +34,8 @@
             <default_setup>
                 <connection>
                     <host>localhost</host>
-                    <username/>
-                    <password/>
+                    <username>root<username/>
+                    <password>root<password/>
                     <dbname>magento</dbname>
                     <model>mysql4</model>
                     <initStatements>SET NAMES utf8</initStatements>
